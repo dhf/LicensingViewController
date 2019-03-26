@@ -46,7 +46,7 @@ public class LicensingViewController: UITableViewController {
     override open func viewDidLoad() {
         tableView.register(LicensingItemCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.estimatedRowHeight = 400
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
     }
 

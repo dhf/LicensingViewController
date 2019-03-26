@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65C44295224A1DDD00722DEE /* LicensingViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 862F248B1B568DB90035ED24 /* LicensingViewController.framework */; };
+		65C44296224A1DDD00722DEE /* LicensingViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 862F248B1B568DB90035ED24 /* LicensingViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		860B52331B71480900155379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860B52321B71480900155379 /* AppDelegate.swift */; };
 		862F24911B568DB90035ED24 /* LicensingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 862F24901B568DB90035ED24 /* LicensingViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		862F24971B568DB90035ED24 /* LicensingViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 862F248B1B568DB90035ED24 /* LicensingViewController.framework */; };
@@ -19,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		65C44297224A1DDD00722DEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 862F24821B568DB90035ED24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 862F248A1B568DB90035ED24;
+			remoteInfo = LicensingViewController;
+		};
 		862F24981B568DB90035ED24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 862F24821B568DB90035ED24 /* Project object */;
@@ -27,6 +36,20 @@
 			remoteInfo = LicensingViewController;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65C44299224A1DDD00722DEE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				65C44296224A1DDD00722DEE /* LicensingViewController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		860B52301B71480900155379 /* LicensingViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LicensingViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C44295224A1DDD00722DEE /* LicensingViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,10 +188,12 @@
 				860B522C1B71480900155379 /* Sources */,
 				860B522D1B71480900155379 /* Frameworks */,
 				860B522E1B71480900155379 /* Resources */,
+				65C44299224A1DDD00722DEE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				65C44298224A1DDD00722DEE /* PBXTargetDependency */,
 			);
 			name = LicensingViewControllerDemo;
 			productName = LicensingViewControllerDemo;
@@ -223,15 +249,15 @@
 				TargetAttributes = {
 					860B522F1B71480900155379 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					862F248A1B568DB90035ED24 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					862F24951B568DB90035ED24 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -311,6 +337,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		65C44298224A1DDD00722DEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 862F248A1B568DB90035ED24 /* LicensingViewController */;
+			targetProxy = 65C44297224A1DDD00722DEE /* PBXContainerItemProxy */;
+		};
 		862F24991B568DB90035ED24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 862F248A1B568DB90035ED24 /* LicensingViewController */;
@@ -322,6 +353,7 @@
 		860B523F1B71480900155379 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = LicensingViewControllerDemo/Info.plist;
@@ -329,19 +361,22 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiagomnh.LicensingViewControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		860B52401B71480900155379 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LicensingViewControllerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiagomnh.LicensingViewControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -473,7 +508,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -493,7 +529,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomnh.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -512,7 +549,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomnh.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -527,7 +565,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomnh.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
